@@ -1,11 +1,11 @@
 .flight-card-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  margin: 20px;
-  padding: 20px;
+  margin: 45px;
+  padding: 30px;
   border: none;
   border-radius: 6px;
   background: rgb(169, 252, 231);
@@ -16,6 +16,11 @@
 }
 .flight-card-container .airline-data {
   width: 30%;
+}
+.flight-card-container .airline-data img {
+  width: 200px;
+  height: 200px;
+  border-radius: 6px;
 }
 .flight-card-container .flight-data {
   display: flex;
@@ -39,9 +44,10 @@
   background-color: rgb(169, 252, 231);
   border: none;
   border-radius: 26px;
-  width: 100px;
-  height: 50px;
+  width: 150px;
+  height: 70px;
   margin: 20px;
+  margin-right: 80px;
   cursor: pointer;
 }
 .flight-card-container button .link {

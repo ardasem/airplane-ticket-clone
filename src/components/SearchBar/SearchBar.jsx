@@ -1,16 +1,15 @@
 import React from "react";
 import destinationData from "../../assets/data/destination.json";
 import { useState } from "react";
-import { useDispatch} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setFlightSearch } from "../../redux/user/userActions";
 import { Link } from "react-router-dom";
 import "./SearchBar.scss";
 
-
-
 function SearchBar({ data }) {
   const dispatch = useDispatch();
-  
+
+  const reduxState = useSelector((state) => state.userState);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +17,7 @@ function SearchBar({ data }) {
       formData.departurePort !== "Düsseldorf" &&
       formData.arrivalPort !== "Antalya"
     ) {
-      setFormData(prevState => ({...prevState, dataPassed:false}))
+      setFormData((prevState) => ({ ...prevState, dataPassed: false }));
       console.log("Ucus Bulunamadi");
     } else {
       console.log("Form Data:", formData);
@@ -32,12 +31,11 @@ function SearchBar({ data }) {
     departureDate: "",
     arrivalDate: "",
     numberOfPassengers: 1,
-    dataPassed:false,
+    dataPassed: false,
   });
 
   return (
     <form className="search-form" onSubmit={handleSubmit}>
-
       <div className="search-div">
         <label className="label" htmlFor="departure-port">
           Kalkış
@@ -49,7 +47,10 @@ function SearchBar({ data }) {
             setFormData({ ...formData, departurePort: e.target.value })
           }
         >
-          <option value=''>Seçiniz</option>
+          {!reduxState.travelTo && <option value="">Seçiniz</option>}
+          {reduxState.travelTo && (
+            <option value={reduxState.travelFrom}>{reduxState.travelFrom}</option>
+          )}
           {destinationData.ports.map((port) => (
             <option key={port.code} value={port.explanation}>
               {port.explanation}
@@ -69,7 +70,10 @@ function SearchBar({ data }) {
             setFormData({ ...formData, arrivalPort: e.target.value })
           }
         >
-          <option value="">Seçiniz</option>
+          {!reduxState.travelTo && <option value="">Seçiniz</option>}
+          {reduxState.travelTo && (
+            <option value={reduxState.travelTo}>{reduxState.travelTo}</option>
+          )}{" "}
           {destinationData.ports.map((port) => (
             <option key={port.code} value={port.explanation}>
               {port.explanation}
@@ -86,6 +90,7 @@ function SearchBar({ data }) {
           className="data-input"
           name="departure-date"
           type="date"
+          value={reduxState.departureDate}
           onChange={(e) =>
             setFormData({ ...formData, departureDate: e.target.value })
           }
@@ -100,6 +105,7 @@ function SearchBar({ data }) {
           className="data-input"
           name="departure-date"
           type="date"
+          value={reduxState.arrivalDate}
           onChange={(e) =>
             setFormData({ ...formData, arrivalDate: e.target.value })
           }
@@ -113,6 +119,7 @@ function SearchBar({ data }) {
         <select
           className="dropdown-input"
           name="number-of-passengers"
+          value={reduxState.numberOfPassengers}
           onChange={(e) =>
             setFormData({ ...formData, numberOfPassengers: e.target.value })
           }
@@ -128,7 +135,9 @@ function SearchBar({ data }) {
       </div>
 
       <button type="submit" onClick={handleSubmit}>
-        <Link className="link" to="/available-flights">Ara</Link>
+        <Link className="link" to="/available-flights">
+          Ara
+        </Link>
       </button>
     </form>
   );

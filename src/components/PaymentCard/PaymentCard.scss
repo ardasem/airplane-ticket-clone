@@ -1,0 +1,119 @@
+
+
+$fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$textShadow:  2px 5px 32px #000000;
+
+.payment-card-container{
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    margin:50px 345px 50px 345px;
+    gap: 25px;
+    border: none;
+    border-radius: 6px;
+    background: rgb(169, 252, 231);
+    background: linear-gradient(
+      90deg,
+      rgba(169, 252, 231, 1) 0%,
+      rgba(4, 167, 217, 1) 97%
+    );
+  
+    text-shadow: $textShadow;
+    justify-content: space-around;
+  
+
+    .dropdown-input {
+      border: 2px solid rgba(4, 167, 217, 1);
+      border-radius: 6px;
+      font-family: $fontFamily;
+      height: 44px;
+      width: 200px;
+      margin: 20px;
+      text-align: center;
+    }
+  
+    .data-input {
+      border: 2px solid rgba(4, 167, 217, 1);
+      border-radius: 6px;
+      font-family: $fontFamily;
+      height: 40px;
+      width: 200px;
+      text-align: center;
+      margin: 20px;
+    }
+
+    
+    .cardnumber-input {
+        border: 2px solid rgba(4, 167, 217, 1);
+        border-radius: 6px;
+        font-family: $fontFamily;
+        font-size: 23px;
+        height: 40px;
+        width: 680px;
+        text-align: center;
+        margin: 20px;
+      }
+  
+    .label {
+      font-family: $fontFamily;
+      font-size: 20px;
+    }
+  
+    button {
+      font-family: $fontFamily;
+      font-size: 20px;
+      text-decoration: none;
+      justify-content: center;
+      align-items: center;
+      background-color:white;
+      border: none;
+      border-radius: 36px;
+      width: 150px;
+      height: 70px;
+      margin: 20px;
+      cursor: pointer;
+      .link {
+        text-decoration: none;
+        color: white;
+        text-shadow: $textShadow;
+        
+      }
+    }
+  
+    button:hover {
+      background-color: rgb(77, 77, 77);
+      color: white;
+    }
+
+    .radio-buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .checkbox-div{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .final-price{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1{
+        font-family: $fontFamily;
+        font-size: 30px;
+    }
+
+    h2{
+        font-family: $fontFamily;
+        font-size: 26px;
+    }
+  }
+  
+

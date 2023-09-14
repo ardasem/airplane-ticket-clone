@@ -3,23 +3,26 @@ import {
   SET_FLIGHT_DATA,
   SET_USER_DATA,
   SET_FLIGHT_SEARCH,
+ 
 } from "./userTypes";
 
 const initialState = {
-  passengers: [{ name: "", surname: "", dateOfBirth: "", IDNumber: 0 }],
-  numberOfPassengers: 1,
-  travelFrom: "",
-  travelTo: "",
-  departureDate: "",
-  arrivalDate: "",
-  flightInsurance: false,
-  depTime: "",
-  arrTime: "",
-  arrPort: "",
-  depPort: "",
-  airline: "",
-  price: "",
-  currency: "",
+  userState: {
+    passengers: [{ name: "", surname: "", dateOfBirth: "", IDNumber: 0 }],
+    numberOfPassengers: 1,
+    travelFrom: "",
+    travelTo: "",
+    departureDate: "",
+    arrivalDate: "",
+    flightInsurance: false,
+    depTime: "",
+    arrTime: "",
+    arrPort: "",
+    depPort: "",
+    airline: "",
+    price: "",
+    currency: "",
+  },
 };
 
 const userReducer = (state = initialState, action) => {
@@ -53,6 +56,7 @@ const userReducer = (state = initialState, action) => {
         flightInsurance: action.payload.flightInsurance,
       };
     }
+    
     default:
       return state;
   }

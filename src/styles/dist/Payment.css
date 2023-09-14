@@ -1,1 +1,6 @@
-/*# sourceMappingURL=Payment.css.map */
+.payment-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=Payment.css.map */
