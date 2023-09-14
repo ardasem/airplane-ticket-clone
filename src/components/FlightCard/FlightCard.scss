@@ -1,0 +1,75 @@
+$fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$textShadow:  2px 5px 32px #000000;
+
+.flight-card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 6px;
+    background: rgb(169, 252, 231);
+    background: linear-gradient(
+      90deg,
+      rgba(169, 252, 231, 1) 0%,
+      rgba(4, 167, 217, 1) 97%);
+
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      font-size: 26px;
+
+    .airline-data{
+        width:30%;
+    }
+
+    .flight-data{
+        display: flex;
+        flex-direction: row;
+        gap: 250px;
+        width: 70%;
+    }
+
+    .heading{
+        font-weight: 900;
+    }
+
+    .pricing {
+        display: grid;
+        grid-column: span 2;
+    }
+
+    button {
+        font-family: $fontFamily;
+        font-size: 26px;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(169, 252, 231);
+        border: none;
+        border-radius: 26px;
+        width: 100px;
+        height: 50px;
+        margin: 20px;
+        cursor: pointer;
+        .link {
+          text-decoration: none;
+          color: white;
+          text-shadow: $textShadow;
+          
+        }
+      }
+    
+      button:hover {
+        background-color: rgb(147, 240, 217);
+      }
+
+      .link {
+        text-decoration: none;
+        color: white;
+        text-shadow: $textShadow;
+        
+      }
+}

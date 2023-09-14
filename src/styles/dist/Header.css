@@ -1,0 +1,27 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgb(169, 252, 231);
+  background: linear-gradient(90deg, rgb(169, 252, 231) 0%, rgb(4, 167, 217) 97%);
+  margin: 0px;
+}
+.header-container .company-logo {
+  width: 100px;
+  height: 65px;
+  filter: invert(1);
+}
+.header-container .company-logo:hover {
+  filter: invert(0);
+}
+.header-container .profile-logo {
+  width: 45px;
+  height: 45px;
+  filter: invert(1);
+  cursor: pointer;
+}
+.header-container .profile-logo:hover {
+  filter: invert(0);
+}/*# sourceMappingURL=Header.css.map */
