@@ -8,18 +8,21 @@ function BillingCard({onBillingDataChange}) {
     name:'',
     surname: '',
     TCKN: '',
-    citizen: true,
+    notCitizen: false,
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
+  const handleInputChange = (event) => {
+    
+    const { name, value,checked} = event.target;
     setBillingState({
      ...billingState,
-      [name]: value,
+     [name]: name === 'notCitizen' ? checked : value,
     });
+    console.log(billingState)
   };
 
   useEffect(() => {
+    console.log(billingState); // Log the updated state
     onBillingDataChange(billingState);
   }, [billingState, onBillingDataChange]);
 
@@ -38,8 +41,8 @@ function BillingCard({onBillingDataChange}) {
       </div>
 
       <div className="checkbox">
-        <input type="checkbox" name="citizen" id="not-citizen"  onChange={handleInputChange}/>
-        <label htmlFor="not-citizen">T.C. Vatandaşı değilim.</label>
+        <input type="checkbox" name="notCitizen" id="notCitizen" checked={billingState.notCitizen} onChange={handleInputChange}/>
+        <label htmlFor="notCitizen">T.C. Vatandaşı değilim.</label>
       </div>
     </form>
   </div>

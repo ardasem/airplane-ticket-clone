@@ -1,9 +1,9 @@
-import { SET_USER_DATA,ADD_PASSENGERS,ADD_CONTACT_INFO,ADD_BILLING_INFO } from "./userTypes";
+import { SET_USER_DATA,ADD_PASSENGERS,ADD_CONTACT_INFO,ADD_BILLING_INFO,ADD_INSURANCE_INFO } from "./userTypes";
 
 const initialState = {
   userState: {
     passengers: [],
-    flightInsurance: false,
+    insurance: false,
     contactInfo: [],
     billingInfo: [],      
     
@@ -33,6 +33,14 @@ const userReducer = (state = initialState, action) => {
           billingInfo: action.payload,         
       };
     }
+
+    case ADD_INSURANCE_INFO: {
+      return {
+        ...state,       
+          insurance: action.payload,         
+      };
+    }
+
     case SET_USER_DATA: {
       return {
         ...state.userState,

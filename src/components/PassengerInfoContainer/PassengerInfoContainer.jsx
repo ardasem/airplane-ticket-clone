@@ -3,10 +3,10 @@ import PassengerInfoCard from "../PassengerInfoCard/PassengerInfoCard";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { useDispatch } from "react-redux";
-import { addPassengers } from "../../redux/user/userActions";
 import "./PassengerInfoContainer.scss";
 
 function PassengerInfoContainer({onPassengerDataChange}) {
+
   const searchState = useSelector((state) => state.searchState);
   const dispatch = useDispatch();
 
@@ -22,8 +22,7 @@ function PassengerInfoContainer({onPassengerDataChange}) {
   };
 
   useEffect(()=>{
-    onPassengerDataChange(passengerStates);
- 
+    onPassengerDataChange(passengerStates); 
   },[passengerStates])
  
   const cards = () => {
@@ -32,7 +31,7 @@ function PassengerInfoContainer({onPassengerDataChange}) {
       cardsArr.push(
         <PassengerInfoCard
           passengerStates={passengerStates}
-          onFormStateChange={handleFormStateChange}
+          onPassengerStateChange={handleFormStateChange}
           numberOfPassengers={i}
         />
       );

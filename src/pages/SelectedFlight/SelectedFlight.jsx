@@ -9,7 +9,7 @@ import InsuranceCard from '../../components/InsuranceCard/InsuranceCard'
 import Footer from '../../components/Footer/Footer'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
-import { addPassengers, addContactInfo,addBillingInfo } from '../../redux/user/userActions'
+import { addPassengers, addContactInfo,addBillingInfo,addInsuranceInfo } from '../../redux/user/userActions'
 
 function SelectedFlight() {
 
@@ -26,21 +26,24 @@ function SelectedFlight() {
     dispatch(addPassengers(passengerState));
     dispatch(addContactInfo(contactState));
     dispatch(addBillingInfo(billingState));
+    dispatch(addInsuranceInfo(insuranceState));
     
   };
 
   const handlePassengerDataChange = (data) => {
-    setPassengerState(data);
-    
+    setPassengerState(data);    
   };
 
   const handleContactDataChange = (data)=> {
-    setContactState(data);
-    
+    setContactState(data);    
   }
 
   const handleBillingDataChange = (data)=> {
     setBillingState(data);
+  }
+
+  const handleInsuranceDataChange = (data)=> {
+    setInsuranceState(data);
   }
 
   return (
@@ -51,7 +54,7 @@ function SelectedFlight() {
       <PassengerInfoContainer onPassengerDataChange={handlePassengerDataChange}/>
       <ContactCard onContactDataChange={handleContactDataChange}/>
       <BillingCard onBillingDataChange={handleBillingDataChange}/>
-      <InsuranceCard />
+      <InsuranceCard onInsuranceDataChange={handleInsuranceDataChange}/>
       <Footer />
 
       <button onClick={handleReduxDispatch}>Click to dispatch</button>
