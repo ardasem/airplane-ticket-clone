@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"FlightInfoCard.css"}
+{"version":3,"sources":["../../components/FlightInfoCard/FlightInfoCard.scss","FlightInfoCard.css"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,mBAAA;EACA,aAAA;EACA,wBAAA;EACA,SAAA;EACA,YAAA;EACA,kBAAA;EACA,8BAAA;EACA,+EAAA;ACCJ;ADKI;EACI,YAAA;EACA,aAAA;EACA,kBAAA;ACHR","file":"FlightInfoCard.css"}

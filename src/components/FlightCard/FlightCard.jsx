@@ -2,7 +2,7 @@ import React from "react";
 import "./FlightCard.scss";
 import { useState,useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setFlightData } from "../../redux/user/userActions";
+import { setFlightData } from "../../redux/flight/flightActions";
 import { Link } from "react-router-dom";
 import condor from '../../assets/img/condor.png'
 import freebird from '../../assets/img/freebird.png'

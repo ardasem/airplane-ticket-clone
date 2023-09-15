@@ -2,14 +2,14 @@ import React from "react";
 import destinationData from "../../assets/data/destination.json";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setFlightSearch } from "../../redux/user/userActions";
+import { setFlightSearch } from "../../redux/search/searchActions";
 import { Link } from "react-router-dom";
 import "./SearchBar.scss";
 
 function SearchBar({ data }) {
   const dispatch = useDispatch();
 
-  const reduxState = useSelector((state) => state.userState);
+  const reduxState = useSelector((state) => state.searchState);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,7 +49,9 @@ function SearchBar({ data }) {
         >
           {!reduxState.travelTo && <option value="">Seçiniz</option>}
           {reduxState.travelTo && (
-            <option value={reduxState.travelFrom}>{reduxState.travelFrom}</option>
+            <option value={reduxState.travelFrom}>
+              {reduxState.travelFrom}
+            </option>
           )}
           {destinationData.ports.map((port) => (
             <option key={port.code} value={port.explanation}>

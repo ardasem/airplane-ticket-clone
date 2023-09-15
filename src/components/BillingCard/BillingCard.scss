@@ -1,0 +1,47 @@
+.billing-card-container{
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    margin:25px 50px 25px 50px;
+    gap: 25px;
+    border: none;
+    border-radius: 6px;
+    background: rgb(169, 252, 231);
+    background: linear-gradient(
+      90deg,
+      rgba(169, 252, 231, 1) 0%,
+      rgba(4, 167, 217, 1) 97%
+    );
+   
+    justify-content: space-around;
+    
+
+    .billing-form{
+        display: flex;
+        flex-direction: row;
+        gap: 35px;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .checkbox{
+        display: flex;
+        gap: 12px;
+    }
+
+   
+  .inputs{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    
+    input{
+    border: none;
+    border-radius: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    }
+  }
+}

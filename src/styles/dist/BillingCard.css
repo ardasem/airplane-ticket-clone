@@ -1,1 +1,36 @@
-/*# sourceMappingURL=BillingCard.css.map */
+.billing-card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  margin: 25px 50px 25px 50px;
+  gap: 25px;
+  border: none;
+  border-radius: 6px;
+  background: rgb(169, 252, 231);
+  background: linear-gradient(90deg, rgb(169, 252, 231) 0%, rgb(4, 167, 217) 97%);
+  justify-content: space-around;
+}
+.billing-card-container .billing-form {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  margin-top: 20px;
+  align-items: center;
+}
+.billing-card-container .checkbox {
+  display: flex;
+  gap: 12px;
+}
+.billing-card-container .inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.billing-card-container .inputs input {
+  border: none;
+  border-radius: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+}/*# sourceMappingURL=BillingCard.css.map */

@@ -1,21 +1,24 @@
-import { BUY_FLIGHT, SET_USER_DATA, SET_FLIGHT_DATA,SET_FLIGHT_SEARCH } from "./userTypes";
+import { BUY_FLIGHT, SET_USER_DATA, ADD_PASSENGERS, ADD_CONTACT_INFO ,ADD_BILLING_INFO} from "./userTypes";
 
 
-export const setFlightData = (flightData) => {
-  return {
-    type: SET_FLIGHT_DATA,
-    info: "Fligh data is set.",
-    payload: flightData,
-  };
-};
+export const addPassengers = (newPassengers) => ({
+  type: ADD_PASSENGERS,
+  info: 'Passengers added.',
+  payload: newPassengers,
+});
 
-export const setFlightSearch = (flightSearchData) => {
-  return {
-    type: SET_FLIGHT_SEARCH,
-    info: "Fligh search data is set.",
-    payload: flightSearchData,
-  };
-};
+export const addContactInfo = (contactData) => ({
+  type: ADD_CONTACT_INFO,
+  info: 'Contact data added',
+  payload: contactData,
+});
+
+export const addBillingInfo = (billingData) => ({
+  type: ADD_BILLING_INFO,
+  info: 'Billing data added',
+  payload: billingData,
+});
+
 
 
 export const setUserData = (userData) => {

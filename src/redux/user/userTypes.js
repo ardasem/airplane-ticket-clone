@@ -1,7 +1,8 @@
 export const BUY_FLIGHT = 'BUY_FLIGHT';
-export const SET_FLIGHT_SEARCH = 'SET_FLIGHT_SEARCH';
-export const SET_FLIGHT_DATA = 'SET_FLIGHT_DATA';
 export const SET_USER_DATA = 'SET_USER_DATA';
+export const ADD_PASSENGERS = 'ADD_PASSENGERS';
+export const ADD_CONTACT_INFO = 'ADD_CONTACT_INFO'
+export const ADD_BILLING_INFO = 'ADD_BILLING_INFO'
 
 
 

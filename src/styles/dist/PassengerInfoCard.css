@@ -1,1 +1,37 @@
-/*# sourceMappingURL=PassengerInfoCard.css.map */
+.passenger-info-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+}
+.passenger-info-card-container .passenger-form {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  margin-top: 20px;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+.passenger-info-card-container .radio-buttons {
+  display: flex;
+  gap: 12px;
+}
+.passenger-info-card-container .inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.passenger-info-card-container .inputs input {
+  border: none;
+  border-radius: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+}
+.passenger-info-card-container .checkbox {
+  display: flex;
+  gap: 12px;
+}/*# sourceMappingURL=PassengerInfoCard.css.map */

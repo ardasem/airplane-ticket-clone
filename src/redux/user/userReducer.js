@@ -1,62 +1,47 @@
-import {
-  BUY_FLIGHT,
-  SET_FLIGHT_DATA,
-  SET_USER_DATA,
-  SET_FLIGHT_SEARCH,
- 
-} from "./userTypes";
+import { SET_USER_DATA,ADD_PASSENGERS,ADD_CONTACT_INFO,ADD_BILLING_INFO } from "./userTypes";
 
 const initialState = {
   userState: {
-    passengers: [{ name: "", surname: "", dateOfBirth: "", IDNumber: 0 }],
-    numberOfPassengers: 1,
-    travelFrom: "",
-    travelTo: "",
-    departureDate: "",
-    arrivalDate: "",
+    passengers: [],
     flightInsurance: false,
-    depTime: "",
-    arrTime: "",
-    arrPort: "",
-    depPort: "",
-    airline: "",
-    price: "",
-    currency: "",
+    contactInfo: [],
+    billingInfo: [],      
+    
   },
 };
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_FLIGHT_SEARCH: {
+    case ADD_PASSENGERS: {
+   
       return {
-        ...state,
-        numberOfPassengers: action.payload.numberOfPassengers,
-        travelFrom: action.payload.departurePort,
-        travelTo: action.payload.arrivalPort,
-        departureDate: action.payload.departureDate,
-        arrivalDate: action.payload.arrivalDate,
+        ...state.userState,       
+          passengers: [...state.userState.passengers, action.payload],         
       };
     }
-    case SET_FLIGHT_DATA: {
+
+    case ADD_CONTACT_INFO: {   
       return {
-        ...state,
-        depTime: action.payload.depTime,
-        arrTime: action.payload.arrTime,
-        arrPort: action.payload.arrPort,
-        depPort: action.payload.depPort,
-        airline: action.payload.airline,
-        price: action.payload.price,
-        currency: action.payload.currency,
+        ...state,       
+          contactInfo: action.payload,         
+      };
+    }
+
+    case ADD_BILLING_INFO: {
+      return {
+        ...state,       
+          billingInfo: action.payload,         
       };
     }
     case SET_USER_DATA: {
       return {
-        ...state,
-        passengers: action.payload.passengers,
+        ...state.userState,
         flightInsurance: action.payload.flightInsurance,
+        contactInfo: action.payload.contactInfo,
+        billingInfo: action.payload.billingInfo,
       };
     }
-    
+
     default:
       return state;
   }

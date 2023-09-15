@@ -1,1 +1,16 @@
-/*# sourceMappingURL=FlightInfoCard.css.map */
+.flight-info-container {
+  display: flex;
+  flex-direction: row;
+  padding: 35px;
+  margin: 25px 50px 0 50px;
+  gap: 25px;
+  border: none;
+  border-radius: 6px;
+  background: rgb(169, 252, 231);
+  background: linear-gradient(90deg, rgb(169, 252, 231) 0%, rgb(4, 167, 217) 97%);
+}
+.flight-info-container img {
+  width: 300px;
+  height: 300px;
+  border-radius: 6px;
+}/*# sourceMappingURL=FlightInfoCard.css.map */

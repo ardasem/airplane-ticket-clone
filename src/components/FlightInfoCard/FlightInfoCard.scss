@@ -1,0 +1,22 @@
+.flight-info-container {
+    display: flex;
+    flex-direction: row;
+    padding: 35px;
+    margin:25px 50px 0 50px;
+    gap: 25px;
+    border: none;
+    border-radius: 6px;
+    background: rgb(169, 252, 231);
+    background: linear-gradient(
+      90deg,
+      rgba(169, 252, 231, 1) 0%,
+      rgba(4, 167, 217, 1) 97%
+    );
+  
+    img{
+        width: 300px;
+        height: 300px;
+        border-radius: 6px;
+    }
+
+}

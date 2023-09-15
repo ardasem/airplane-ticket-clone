@@ -1,1 +1,27 @@
-/*# sourceMappingURL=PriceCard.css.map */
+.pricecard-container {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  margin: 25px 50px 25px 50px;
+  gap: 25px;
+  border: none;
+  border-radius: 6px;
+  background: rgb(169, 252, 231);
+  background: linear-gradient(90deg, rgb(169, 252, 231) 0%, rgb(4, 167, 217) 97%);
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 28px;
+  justify-content: space-between;
+  align-items: center;
+}
+.pricecard-container .price-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 35px;
+  width: 100%;
+}
+.pricecard-container .section {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=PriceCard.css.map */

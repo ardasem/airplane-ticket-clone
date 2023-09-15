@@ -1,0 +1,30 @@
+.passenger-info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    margin:0 50px 25px 50px;
+    gap: 25px;
+    border: none;
+    border-radius: 6px;
+    background: rgb(169, 252, 231);
+    background: linear-gradient(
+      90deg,
+      rgba(169, 252, 231, 1) 0%,
+      rgba(4, 167, 217, 1) 97%
+    );
+   
+    justify-content: space-around;
+ 
+    .cards{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    p{
+        font-size: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+
+    }
+}

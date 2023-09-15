@@ -1,4 +1,4 @@
 export {buyFlight} from './user/userActions'
-export {setFlightSearch} from './user/userActions'
-export {setFlightData} from './user/userActions'
-export {setUserData} from './user/userActions'
+export {setFlightSearch} from './search/searchActions'
+export {setFlightData} from './flight/flightActions'
+export {setUserData,addContactInfo,addPassengers,addBillingInfo} from './user/userActions'
