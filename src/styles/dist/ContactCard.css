@@ -8,5 +8,48 @@
   border-radius: 6px;
   background: rgb(169, 252, 231);
   background: linear-gradient(90deg, rgb(169, 252, 231) 0%, rgb(4, 167, 217) 97%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 22px;
+  text-shadow: 2px 5px 32px #000000;
   justify-content: space-around;
+}
+.contact-container .inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.contact-container .inputs input {
+  border: none;
+  border-radius: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 40px;
+  width: 300px;
+  text-align: center;
+}
+.contact-container .inputs .checkbox {
+  height: 14px;
+  width: 14px;
+}
+.contact-container .big-heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.contact-container .medium-heading {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.contact-container .small-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.contact-container .campaign-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }/*# sourceMappingURL=ContactCard.css.map */

@@ -1,20 +1,67 @@
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    padding: 35px;
-    margin: 0 50px 0 50px;
-    gap: 25px;
-    border: none;
-    border-radius: 6px;
-    background: rgb(169, 252, 231);
-    background: linear-gradient(
-      90deg,
-      rgba(169, 252, 231, 1) 0%,
-      rgba(4, 167, 217, 1) 97%
-    );
-  
- 
-    justify-content: space-around;
- 
+@import "../../styles/globalstyles/Variables.scss";
 
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  margin: 0 50px 0 50px;
+  gap: 25px;
+  border: none;
+  border-radius: 6px;
+  background: $defaultBg;
+  background: $defaultBgGradient;
+  font-family: $fontFamily;
+  color: $fontColor;
+  font-size: $paragraphSize;
+  text-shadow: $textShadow;
+
+  justify-content: space-around;
+
+  
+  .inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+    input {
+      border: none;
+      border-radius: 6px;
+      font-family: $fontFamily;
+      height: 40px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .checkbox{
+      height: 14px;
+      width: 14px;
+     
+    }
+  }
+
+  .big-heading {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .medium-heading {
+    font-size: $headingTwoSize;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .small-heading {
+    font-size: $headingThreeSize;
+    margin-bottom: 10px;
+  }
+
+  .campaign-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 }

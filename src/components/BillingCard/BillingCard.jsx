@@ -27,7 +27,7 @@ function BillingCard({onBillingDataChange}) {
 
   return (
      <div className="billing-card-container">
-      <p>
+      <p className='big-heading'>
         Fatura Bilgileri
       </p>
     <form className="billing-form">

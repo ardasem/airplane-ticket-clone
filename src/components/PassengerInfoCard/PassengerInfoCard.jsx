@@ -35,7 +35,7 @@ function PassengerInfoCard({onPassengerStateChange,numberOfPassengers}) {
   return (
     <div className="passenger-info-card-container">
       <form className="passenger-form">
-        <p>{numberOfPassengers}. Yetişkin</p>
+        <p className="small-heading"> {`${numberOfPassengers}. Yetişkin`}</p>
 
         <div className="radio-buttons">
           <label htmlFor="gender-radio-female">Kadin</label>

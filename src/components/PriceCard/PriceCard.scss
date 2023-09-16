@@ -1,36 +1,50 @@
+@import "../../styles/globalstyles/Variables.scss";
+
 .pricecard-container {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  margin: 25px 50px 25px 50px;
+  gap: 25px;
+  border: none;
+  border-radius: 6px;
+  background: $defaultBg;
+  background: $defaultBgGradient;
+  color: white;
+  font-family: $fontFamily;
+  font-size: 28px;
+  text-shadow: $textShadow;
+  
+
+  .price-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 40px;
+    border-radius: 16px;
+    background-color: rgb(165, 159, 159);
+  }
+
+  .section {
     display: flex;
     flex-direction: column;
-    padding: 35px;
-    margin:25px 50px 25px 50px;
-    gap: 25px;
-    border: none;
-    border-radius: 6px;
-    background: rgb(169, 252, 231);
-    background: linear-gradient(
-      90deg,
-      rgba(169, 252, 231, 1) 0%,
-      rgba(4, 167, 217, 1) 97%
-    );
-  
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 28px;
- 
-    justify-content: space-between;
-    align-items: center;
-   
+  }
 
-    .price-info{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 35px;
-        width: 100%;
-    }
+  .big-heading {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
 
-    .section{
-        display: flex;
-        flex-direction: column;
-    }
+  .medium-heading {
+    font-size: $headingTwoSize;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .small-heading {
+    font-size: $headingThreeSize;
+    margin-bottom: 10px;
+  }
 }

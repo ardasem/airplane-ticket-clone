@@ -1,37 +1,50 @@
 .passenger-info-card-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  gap: 15px;
+  justify-content: space-around;
 }
 .passenger-info-card-container .passenger-form {
   display: flex;
   flex-direction: row;
-  gap: 35px;
+  justify-content: space-around;
+  gap: 40px;
   margin-top: 20px;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
 }
-.passenger-info-card-container .radio-buttons {
+.passenger-info-card-container .passenger-form .big-heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.passenger-info-card-container .passenger-form .medium-heading {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.passenger-info-card-container .passenger-form .small-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.passenger-info-card-container .passenger-form .radio-buttons {
   display: flex;
   gap: 12px;
 }
-.passenger-info-card-container .inputs {
+.passenger-info-card-container .passenger-form .inputs {
   display: flex;
   flex-direction: row;
   gap: 50px;
 }
-.passenger-info-card-container .inputs input {
+.passenger-info-card-container .passenger-form .inputs input {
   border: none;
   border-radius: 6px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 40px;
-  width: 200px;
+  width: 300px;
   text-align: center;
 }
-.passenger-info-card-container .checkbox {
+.passenger-info-card-container .passenger-form .checkbox {
   display: flex;
   gap: 12px;
 }/*# sourceMappingURL=PassengerInfoCard.css.map */

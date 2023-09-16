@@ -42,7 +42,7 @@ function PassengerInfoContainer({onPassengerDataChange}) {
 
   return (
     <div className="passenger-info-container">
-      <p>Yolcu Bilgileri</p>
+      <p className="big-heading">Yolcu Bilgileri</p>
       <div className="cards">
         {cards().map((card, index) => (
           <div key={index}>{card}</div>

@@ -16,7 +16,8 @@ function PriceCard() {
 
   return (
     <div className="pricecard-container">
-      <p className="heading">Fiyat Detayi</p>
+
+      <p className="big-heading">Fiyat Detayı</p>
 
       <div className="price-info">
         <div className="section">
@@ -27,17 +28,17 @@ function PriceCard() {
         </div>
 
         <div className="section">
-          <label htmlFor="price">Fiyat</label>
-          <p className="price">{reduxFlightState.totalPrice} {reduxFlightState.currency}</p>
+          <label htmlFor="price" className="medium-heading">Fiyat</label>
+          <p className="price"><strong> {reduxFlightState.totalPrice} {reduxFlightState.currency}</strong></p>
         </div>
 
         <div className="section">
-          <label htmlFor="tax">Vergi/Harç (%18)</label>
-          <p className="tax">{reduxFlightState.tax} {reduxFlightState.currency}</p>
+          <label htmlFor="tax" className="medium-heading">Vergi/Harç (%18)</label>
+          <p className="smal">{reduxFlightState.tax} {reduxFlightState.currency}</p>
         </div>
 
         <div className="section">
-          <label htmlFor="cut">Hizmet Bedeli (%8)</label>
+          <label htmlFor="cut" className="medium-heading">Hizmet Bedeli (%8)</label>
           <p className="cut">{reduxFlightState.cut} {reduxFlightState.currency}</p>
         </div>
 

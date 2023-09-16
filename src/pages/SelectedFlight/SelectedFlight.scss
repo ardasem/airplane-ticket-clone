@@ -1,0 +1,35 @@
+@import "../../styles/globalstyles/Variables.scss";
+
+.selected-flight-page {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+        .proceed-button{
+            margin-left: 1730px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+   
+        .link {
+            text-decoration: none;
+            color: white;
+            text-shadow: $textShadow;
+            font-family: $fontFamily;
+            font-size: 22px;
+            padding: 20px 50px 20px 50px;
+            width: 100%;
+            background-color: rgb(169, 252, 231);
+            border: none;
+            border-radius: 26px;
+            cursor: pointer;
+          }
+        
+          .link:hover {
+            background-color: rgb(147, 240, 217);
+          }
+    
+    
+ 
+}

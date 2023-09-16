@@ -1,9 +1,11 @@
 $fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 $fontColor : white;
-$headingSize: 26px;
+$headingOneSize: 28px;
+$headingTwoSize: 26px;
+$headingThreeSize: 24px;
 $paragraphSize: 22px;
 $footerBg: rgb(27, 67, 77);
-$footerBgGradiend: linear-gradient(
+$footerBgGradient: linear-gradient(
   90deg,
   rgba(27, 67, 77, 1) 0%,
   rgba(169, 252, 231, 1) 100%

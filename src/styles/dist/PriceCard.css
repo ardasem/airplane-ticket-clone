@@ -11,17 +11,32 @@
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 28px;
-  justify-content: space-between;
-  align-items: center;
+  text-shadow: 2px 5px 32px #000000;
 }
 .pricecard-container .price-info {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 35px;
-  width: 100%;
+  padding: 40px;
+  border-radius: 16px;
+  background-color: rgb(165, 159, 159);
 }
 .pricecard-container .section {
   display: flex;
   flex-direction: column;
+}
+.pricecard-container .big-heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.pricecard-container .medium-heading {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.pricecard-container .small-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=PriceCard.css.map */

@@ -15,7 +15,8 @@ function FlightCard(props) {
 
   const tax = props.price * reduxSearchState.numberOfPassengers * 0.18;
   const cut = props.price * reduxSearchState.numberOfPassengers * 0.08;
-  const totalPrice = props.price * reduxSearchState.numberOfPassengers + tax + cut;
+  const totalPrice =
+    props.price * reduxSearchState.numberOfPassengers + tax + cut;
 
   const [flightState, setFlightState] = useState({
     airline: "",
@@ -39,9 +40,9 @@ function FlightCard(props) {
       arrTime: props.arrTime,
       price: props.price,
       currency: props.currency,
-      tax: tax,
-      cut: cut,
-      totalPrice: totalPrice,
+      tax: tax.toFixed(2),
+      cut: cut.toFixed(2),
+      totalPrice: totalPrice.toFixed(2),
     });
   }, []);
 
@@ -95,11 +96,12 @@ function FlightCard(props) {
         </div>
       </div>
 
-      <button onClick={handleSelect}>
+
+      <div className="search-button" onClick={handleSelect}>
         <Link className="link" to="/selected-flight">
           Seç
         </Link>
-      </button>
+      </div>
     </div>
   );
 }

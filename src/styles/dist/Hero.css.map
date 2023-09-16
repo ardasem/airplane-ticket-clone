@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../components/Hero/Hero.scss","Hero.css"],"names":[],"mappings":"AAEA;EACI,aAAA;EACA,sBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,mBAAA;EACA,4DAAA;EACA,oDAVM;EAWN,4BAAA;EACA,sBAAA;ACDJ;ADGI;EACI,iBAAA;EACA,eAAA;EACA,iCAAA;ACDR","file":"Hero.css"}
+{"version":3,"sources":["../../components/Hero/Hero.scss","../globalstyles/Variables.scss","Hero.css"],"names":[],"mappings":"AAIA;EAEE,aAAA;EACA,sBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,mBAAA;EAEA,4DCbW;EDcX,oDAZS;EAaT,4BAAA;EACA,sBAAA;AELF;AFOE;EACE,iBAAA;EACA,eAAA;EACA,iCCDU;ACJd","file":"Hero.css"}

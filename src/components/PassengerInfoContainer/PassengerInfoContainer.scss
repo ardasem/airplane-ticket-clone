@@ -1,30 +1,44 @@
+@import "../../styles/globalstyles/Variables.scss";
+
 .passenger-info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  margin: 0 50px 25px 50px;
+  gap: 25px;
+  border: none;
+  border-radius: 6px;
+  background: $defaultBg;
+  background: $defaultBgGradient;
+  justify-content: space-around;
+  text-shadow: $textShadow;
+
+  .big-heading {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .medium-heading {
+    font-size: $headingTwoSize;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .small-heading {
+    font-size: $headingThreeSize;
+    margin-bottom: 10px;
+  }
+
+  .cards {
     display: flex;
     flex-direction: column;
-    padding: 35px;
-    margin:0 50px 25px 50px;
-    gap: 25px;
-    border: none;
-    border-radius: 6px;
-    background: rgb(169, 252, 231);
-    background: linear-gradient(
-      90deg,
-      rgba(169, 252, 231, 1) 0%,
-      rgba(4, 167, 217, 1) 97%
-    );
-   
-    justify-content: space-around;
- 
-    .cards{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
+    width: 100%;
+  }
 
-    p{
-        font-size: 25px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: white;
-
-    }
+  p {
+    font-size: 25px;
+    font-family: $fontFamily;
+    color: $fontColor;
+  }
 }

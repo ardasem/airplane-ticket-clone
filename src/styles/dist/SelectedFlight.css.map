@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"SelectedFlight.css"}
+{"version":3,"sources":["../../pages/SelectedFlight/SelectedFlight.scss","SelectedFlight.css","../globalstyles/Variables.scss"],"names":[],"mappings":"AAEA;EAEI,aAAA;EACA,sBAAA;EACA,8BAAA;ACFJ;ADIQ;EACI,mBAAA;EACA,gBAAA;EACA,mBAAA;ACFZ;ADKQ;EACI,qBAAA;EACA,YAAA;EACA,iCEGE;EFFF,4DElBC;EFmBD,eAAA;EACA,4BAAA;EACA,WAAA;EACA,oCAAA;EACA,YAAA;EACA,mBAAA;EACA,eAAA;ACHZ;ADMU;EACE,oCAAA;ACJZ","file":"SelectedFlight.css"}

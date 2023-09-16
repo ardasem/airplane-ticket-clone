@@ -1,13 +1,13 @@
 $fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-$textShadow:  2px 5px 32px #000000;
+$textShadow: 2px 5px 32px #000000;
 
 .search-form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   padding: 22px;
   margin: 45px;
-  gap: 25px;
+
   border: none;
   border-radius: 6px;
   background: rgb(169, 252, 231);
@@ -19,6 +19,30 @@ $textShadow:  2px 5px 32px #000000;
 
   text-shadow: $textShadow;
   justify-content: space-around;
+
+  .radio-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-family: $fontFamily;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .radio-button-div{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .search-inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+  }
 
   .search-div {
     display: flex;
@@ -49,31 +73,31 @@ $textShadow:  2px 5px 32px #000000;
     font-size: 20px;
   }
 
-  button {
+
+ 
+
+  .link {   
+    text-decoration: none;
+    color: white;
+    text-shadow: $textShadow;
     font-family: $fontFamily;
-        font-size: 26px;
-        text-decoration: none;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(169, 252, 231);
-        border: none;
-        border-radius: 26px;
-        width: 145px;
-        height: 70px;
-        margin: 20px;
-        margin-right: 20px;
+    font-size: 22px;
+    padding: 20px 50px 20px 50px;    
+    background-color: rgb(169, 252, 231);
+    border: none;
+    border-radius: 26px;
     cursor: pointer;
-    .link {
-      text-decoration: none;
-      color: white;
-      text-shadow: $textShadow;
-      width: 100%;
-      height: 100%;
-      
-    }
   }
 
-  button:hover {
+  .link:hover {
     background-color: rgb(147, 240, 217);
   }
+
+  .error-message {
+    color: red;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+ 
 }

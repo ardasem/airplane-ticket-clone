@@ -1,84 +1,61 @@
-$fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-$textShadow:  2px 5px 32px #000000;
+@import "../../styles/globalstyles/Variables.scss";
 
-.flight-card-container{
+.flight-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 45px;
+  padding: 30px;
+  border: none;
+  border-radius: 6px;
+  background: $defaultBg;
+  background: $defaultBgGradient;
+  font-family: $fontFamily;
+  color: $fontColor;
+  font-size: $headingTwoSize;
+
+  .airline-data {
+    width: 30%;
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 6px;
+    }
+  }
+
+  .flight-data {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    margin: 45px;   
-    padding: 30px;
+    gap: 250px;
+    width: 70%;
+  }
+
+  .heading {
+    font-weight: 900;
+  }
+
+  .pricing {
+    display: grid;
+    grid-column: span 2;
+  }
+
+  .link {
+    text-decoration: none;
+    color: white;
+    text-shadow: $textShadow;
+    font-family: $fontFamily;
+    font-size: $headingTwoSize;
+    padding: 20px 50px 20px 50px;
+    background-color: $buttonBgColor;
     border: none;
-    border-radius: 6px;
-    background: rgb(169, 252, 231);
-    background: linear-gradient(
-      90deg,
-      rgba(169, 252, 231, 1) 0%,
-      rgba(4, 167, 217, 1) 97%);
+    border-radius: 26px;
+    cursor: pointer;
+  }
 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
-      font-size: 26px;
-
-    
-
-    .airline-data{
-        width:30%;
-
-        img{
-            width: 200px;
-            height: 200px;
-            border-radius: 6px;
-        }
-    }
-
-    .flight-data{
-        display: flex;
-        flex-direction: row;
-        gap: 250px;
-        width: 70%;
-    }
-
-    .heading{
-        font-weight: 900;
-    }
-
-    .pricing {
-        display: grid;
-        grid-column: span 2;
-    }
-
-    button {
-        font-family: $fontFamily;
-        font-size: 26px;
-        text-decoration: none;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(169, 252, 231);
-        border: none;
-        border-radius: 26px;
-        width: 150px;
-        height: 70px;
-        margin: 20px;
-        margin-right: 80px;
-        cursor: pointer;
-        .link {
-          text-decoration: none;
-          color: white;
-          text-shadow: $textShadow;
-          
-        }
-      }
-    
-      button:hover {
-        background-color: rgb(147, 240, 217);
-      }
-
-      .link {
-        text-decoration: none;
-        color: white;
-        text-shadow: $textShadow;
-        
-      }
+  .link:hover {
+    background-color: $buttonHoverBgColor;
+  }
 }

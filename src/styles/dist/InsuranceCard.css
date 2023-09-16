@@ -1,17 +1,39 @@
 .insurance-card-container {
   display: flex;
   flex-direction: column;
-  padding: 10px 125px 10px 125px;
+  padding: 35px;
   margin: 25px 50px 25px 50px;
   gap: 25px;
   border: none;
   border-radius: 6px;
   background: rgb(169, 252, 231);
   background: linear-gradient(90deg, rgb(169, 252, 231) 0%, rgb(4, 167, 217) 97%);
-  justify-content: space-around;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  text-shadow: 2px 5px 32px #000000;
+}
+.insurance-card-container .big-heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.insurance-card-container .medium-heading {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.insurance-card-container .small-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 .insurance-card-container .insurance-card-form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.insurance-card-container .insurance-card-form .checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }/*# sourceMappingURL=InsuranceCard.css.map */

@@ -1,19 +1,18 @@
 import React from "react";
-import { useState,useEffect } from "react";
-import './ContactCard.scss'
+import { useState, useEffect } from "react";
+import "./ContactCard.scss";
 
-function ContactCard({onContactDataChange}) {
-
-  const [contactState,setContactState] = useState({
-    email:'',
-    phoneNumber: '',
-    isNews: '',
+function ContactCard({ onContactDataChange }) {
+  const [contactState, setContactState] = useState({
+    email: "",
+    phoneNumber: "",
+    isNews: "",
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setContactState({
-     ...contactState,
+      ...contactState,
       [name]: value,
     });
   };
@@ -22,20 +21,39 @@ function ContactCard({onContactDataChange}) {
     onContactDataChange(contactState);
   }, [contactState, onContactDataChange]);
 
-
   return (
     <div className="contact-container">
-      <p className="heading">İletişim Bilgileri</p>
+      <p className="big-heading">İletişim Bilgileri</p>
       <form className="contact-form">
-        <input type="email" name="email" placeholder="E-Posta" onChange={handleInputChange}/>
+        <div className="inputs">
+          <input
+            type="email"
+            name="email"
+            placeholder="E-Posta"
+            onChange={handleInputChange}
+          />
 
-        <input type="text" name="phoneNumber" placeholder="Cep Telefonu" onChange={handleInputChange}/>
+          <input
+            type="text"
+            name="phoneNumber"
+            placeholder="Cep Telefonu"
+            onChange={handleInputChange}
+          />
 
-        <input type="checkbox" name="isNews" id="campaign" onChange={handleInputChange}/>
+          <div className="campaign-container">
+            <input className="checkbox"
+              type="checkbox"
+              name="isNews"
+              id="campaign"
+              onChange={handleInputChange}
+            />
+            <p >
+            Fırsatlar ve kampanyalardan yararlanmak istiyorum.
+          </p>
+          </div>
 
-        <label htmlFor="campaign">
-          Fırsatlar ve kampanyalardan yararlanmak istiyorum.
-        </label>
+          
+        </div>
       </form>
     </div>
   );
