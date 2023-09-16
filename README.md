@@ -48,7 +48,8 @@ SearchBar üzerinde ara tuşuna basıldığı anda dispatch ediliyor.
 * Uçuşun başlayacağı şehir ve biteceği şehirler
 * Kalkış ve varış tarihleri ve yolcu sayısından oluşmakta.
 
-# Seçilen uçuş verisi,
+# Seçilen uçuş verisi
+
 AvailableFlight kısmında listelenen uçuşlardan birini seçtiğiniz anda uçuş ile alakalı daha sonra gösterilmesi beklenen verileri dispatch ediyor. 
 
 * Uçuşun başlangıç ve bitiş saatleri,
@@ -67,7 +68,7 @@ bilgilerini içeriyor.
 
 # Kullanıcı verisi
 
- * Yolcu künyeleri
+ Yolcu künyeleri
   - Yolcu numarası
   - İsim
   - Soyisim
@@ -76,12 +77,12 @@ bilgilerini içeriyor.
   - Vatandaşlık bilgisi 
   - T.C. Kimlik numarası
 
-  * İletişim Bilgileri
+  İletişim Bilgileri
    - E-Posta
    - Telefon Numarası
    - E-Bülten tercihi
 
-  * Fatura Bilgileri
+  Fatura Bilgileri
    - Fatura sahibinin İsmi
    - Soyismi
    - Vatandaşlık Bilgisi
