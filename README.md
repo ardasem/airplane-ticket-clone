@@ -1,71 +1,108 @@
-# Getting Started with Create React App
+# Pinsoft - Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proje 16 component ve 5 sayfadan oluşmaktadır. Componentlerin çoğunda local state'lerini tutulmakta, Kullanıcı verisi, Arama verisi ve seçilen uçuş verisini ise redux üzerinde üç ayrı slice içinde tutulmaktadır. 
 
-## Available Scripts
+Sayfalardaki component dağılımları ise aşağıdaki gibidir.
 
-In the project directory, you can run:
+HomePage
+- Header
+- Hero (Searchbar Componenti Hero içerisinde çağırılmaktadır.)
+- Footer
 
-### `npm start`
+Available-Flights
+- Header
+- Breadcrumb Menu
+- SearchBar
+- Flight Cards
+- Footer
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Selected Flights
+Bu sayfada gördüğünüz her bir section kendi içerisinde ayrı bir component
+- Header
+- Breadcrumb Menu
+- FlightInfoCard
+- PriceCard
+- PassengerInfoContainer (içerisinde yolcu bilgilerini aratılan sayıya göre alabilmek için PassengerInfoCard renderlıyor.)
+- ContactCard
+- BillingCard
+- InsuranceCard
+- Link
+- Footer
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Payment
+- Header
+- PaymentCard
+- Footer 
 
-### `npm test`
+# SelectedFlight sayfasındaki formlardan verilerin alınması:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Yolcu verisini farklı componentlerde toplayıp tek bir tuşla redux üzerine dispatch etmek gerektiği için, her bir componentin state'ini tutup, daha sonra o state önce parent component'e iletiliyor, son aşama olarak da redux'a dispatch ediliyor. Containerlar için bir Grandparent - child ilişkisi var, yani veriyi iki defa bir parent component'e yollamak gerekiyor. Bunu gerçek zamanlı yapılabilmek adına da useEffect hook'larını kullandım. Fakat PassengerInfoCard componentinde useEffect, App'i sonsuz döngüye sokuyordu, bu sebeple orada bu hooku kullanamadım.
 
-### `npm run build`
+# Redux üzerinde tutulan veriler
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Redux üzerinde veriyi 3 farklı bölümde topladım.
+- Arama verisi,
+SearchBar üzerinde ara tuşuna basıldığı anda dispatch ediliyor. 
+Bu veri,
+* Uçuşun başlayacağı şehir ve biteceği şehirler
+* Kalkış ve varış tarihleri ve yolcu sayısından oluşmakta.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Seçilen uçuş verisi,
+AvailableFlight kısmında listelenen uçuşlardan birini seçtiğiniz anda uçuş ile alakalı daha sonra gösterilmesi beklenen verileri dispatch ediyor.
+Bu veri, 
+* Uçuşun başlangıç ve bitiş saatleri,
+* Kalkış ve varış havalimanları
+* Havayolu
+* Kuyruk numarası
+* Fiyat ve bilgisi
+* Para birimi
+* Vergi miktarı
+* Hizmet Bedeli
+* Kalkış tarihi
+* Havayolu Firması Kodu
+* Toplam Fiyat
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+bilgilerini içeriyor.
 
-### `npm run eject`
+- Kullanıcı verisi
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ * Yolcu künyeleri
+  - Yolcu numarası
+  - İsim
+  - Soyisim
+  - Cinsiyet
+  - Doğum tarihi 
+  - Vatandaşlık bilgisi 
+  - T.C. Kimlik numarası
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  * İletişim Bilgileri
+   - E-Posta
+   - Telefon Numarası
+   - E-Bülten tercihi
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  * Fatura Bilgileri
+   - Fatura sahibinin İsmi
+   - Soyismi
+   - Vatandaşlık Bilgisi
+   - T.C. Kimlik Numarası 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   bilgilerini içeriyor.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ # Payment Ekranı
+ Bu bölümdeki bilgiler güvenlik açısından hassas oldukları için bu kısmı redux veya local state üzerinde tutmak istemedim bu sebeple sadece Mock-up olarak bıraktım. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# pinsoft-challange
+
+
