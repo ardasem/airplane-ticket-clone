@@ -4,8 +4,8 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  margin: 45px;
-  padding: 30px;
+  padding: 35px;
+  margin: 25px 50px 0 50px;
   border: none;
   border-radius: 6px;
   background: rgb(169, 252, 231);
@@ -25,8 +25,9 @@
 .flight-card-container .flight-data {
   display: flex;
   flex-direction: row;
-  gap: 250px;
+  gap: 180px;
   width: 70%;
+  padding: 0 80px 0 80px;
 }
 .flight-card-container .heading {
   font-weight: 900;

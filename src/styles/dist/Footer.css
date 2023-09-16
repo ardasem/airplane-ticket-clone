@@ -21,4 +21,8 @@ footer .footer-right {
   display: flex;
   flex-direction: column;
   margin-top: -40px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=Footer.css.map */

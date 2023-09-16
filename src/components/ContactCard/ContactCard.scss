@@ -15,20 +15,24 @@
   font-size: $paragraphSize;
   text-shadow: $textShadow;
 
-  justify-content: space-around;
-
   
   .inputs {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 50px;
+
+    .written-inputs{
+      display: flex;
+      flex-direction: row;
+      gap: 35px;
+    }
 
     input {
       border: none;
       border-radius: 6px;
       font-family: $fontFamily;
       height: 40px;
-      width: 300px;
+      width: 400px;
       text-align: center;
     }
 
@@ -59,8 +63,7 @@
   .campaign-container {
     display: flex;
     flex-direction: row;
-    font-size: 22px;
-    justify-content: center;
+    font-size: $paragraphSize;
     align-items: center;
     gap: 20px;
   }

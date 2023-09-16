@@ -1,8 +1,8 @@
 .search-form {
   display: flex;
   flex-direction: column;
-  padding: 22px;
-  margin: 45px;
+  padding: 35px;
+  margin: 25px 50px 0 50px;
   border: none;
   border-radius: 6px;
   background: rgb(169, 252, 231);
@@ -10,7 +10,6 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-shadow: 2px 5px 32px #000000;
   color: white;
-  align-items: center;
 }
 .search-form .radio-buttons {
   display: flex;
@@ -32,6 +31,7 @@
   flex-direction: row;
   align-items: center;
   gap: 25px;
+  justify-content: space-around;
 }
 .search-form .search-div {
   display: flex;

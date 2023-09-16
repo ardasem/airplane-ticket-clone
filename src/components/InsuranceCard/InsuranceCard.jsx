@@ -5,6 +5,7 @@ import "./InsuranceCard.scss";
 
 function InsuranceCard({ onInsuranceDataChange }) {
   const reduxFlightState = useSelector((state) => state.flightState);
+  const reduxSearchState = useSelector((state)=>state.searchState)
 
   const [insuranceState, setInsuranceState] = useState({
     insurance: false,
@@ -40,8 +41,8 @@ function InsuranceCard({ onInsuranceDataChange }) {
 
         <div>
           <p>
-          Toplam Fiyat: {" "}
-            <strong>{reduxFlightState.totalPrice}{" "}
+          ({reduxSearchState.numberOfPassengers} Kişi) Toplam Fiyat: {" "}
+            <strong>{280*reduxSearchState.numberOfPassengers}{" "}
           {reduxFlightState.currency}</strong>
           </p>
           

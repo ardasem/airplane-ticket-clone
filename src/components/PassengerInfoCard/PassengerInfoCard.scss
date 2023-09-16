@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 40px;
+    gap: 20px;
     margin-top: 20px;
     align-items: center;
     font-family: $fontFamily;
@@ -48,7 +48,7 @@
         border-radius: 6px;
         font-family: $fontFamily;
         height: 40px;
-        width: 300px;
+        width: 220px;
         text-align: center;
       }
     }

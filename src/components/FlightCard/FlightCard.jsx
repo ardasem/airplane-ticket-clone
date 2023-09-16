@@ -8,6 +8,17 @@ import condor from "../../assets/img/condor.png";
 import freebird from "../../assets/img/freebird.png";
 import pegasus from "../../assets/img/pegasus-logo.jpg";
 import sunexpress from "../../assets/img/sunexpress.png";
+const moment = require('moment');
+
+function calculateDuration(depTime, arrTime) {
+  const departureTime = moment(depTime, 'HH:mm:ss');
+  const arrivalTime = moment(arrTime, 'HH:mm:ss');
+
+  const durationMinutes = arrivalTime.diff(departureTime, 'minutes');
+  const formattedDuration = moment.utc(durationMinutes * 60 * 1000).format('HH:mm');
+
+  return formattedDuration;
+}
 
 function FlightCard(props) {
   const dispatch = useDispatch();
@@ -42,6 +53,7 @@ function FlightCard(props) {
       currency: props.currency,
       flightNo: props.flightNo,
       flightDate: props.flightDate,
+      airlineCode: props.airlineCode,
       tax: tax.toFixed(2),
       cut: cut.toFixed(2),
       totalPrice: totalPrice.toFixed(2),
@@ -68,32 +80,38 @@ function FlightCard(props) {
     <div className="flight-card-container">
       <div className="airline-data">
         <img src={chooseLogo()} alt="airline-logo" />
-        <p>{props.airline}</p>
+        <p>{flightState.airline}</p>
       </div>
 
       <div className="flight-data">
+      <div>
+          <p className="heading">Kuyruk No</p>
+          <p>{flightState.flightNo}</p>
+          
+        </div>
+
         <div>
           <p className="heading">Kalkış</p>
-          <p>{props.depPort}</p>
-          <p>{props.depTime}</p>
+          <p>{flightState.depPort}</p>
+          <p>{flightState.depTime}</p>
         </div>
 
         <div>
           <p className="heading">Süre</p>
-          <p>3 Saat</p>
+          <p>{calculateDuration(flightState.depTime,flightState.arrTime)}</p>
           <p>Direkt</p>
         </div>
 
         <div>
-          <p className="heading">İniş</p>
-          <p>{props.arrPort}</p>
-          <p>{props.arrTime}</p>
+          <p className="heading">Varış</p>
+          <p>{flightState.arrPort}</p>
+          <p>{flightState.arrTime}</p>
         </div>
 
         <div className="pricing">
-          <p className="heading">Fiyat</p>
+          <p className="heading">Fiyat (Kişi)</p>
           <p>
-            {props.price} {props.currency}
+            {flightState.price} {flightState.currency}
           </p>
         </div>
       </div>

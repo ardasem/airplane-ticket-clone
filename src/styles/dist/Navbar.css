@@ -1,0 +1,19 @@
+nav {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
+  margin-right: 1300px;
+}
+nav .list {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+}
+nav .list .linknav {
+  text-decoration: none;
+  color: white;
+}
+nav .list .linknav:hover {
+  text-decoration: none;
+  color: black;
+}/*# sourceMappingURL=Navbar.css.map */

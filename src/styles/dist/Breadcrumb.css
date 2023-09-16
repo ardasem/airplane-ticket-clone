@@ -1,0 +1,15 @@
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  list-style-type: none;
+  padding: 10px 20px;
+  margin-left: 40px;
+}
+.breadcrumb a {
+  text-decoration: none;
+  color: black;
+}
+.breadcrumb a:hover {
+  color: rgb(169, 252, 231);
+}/*# sourceMappingURL=Breadcrumb.css.map */

@@ -21,7 +21,7 @@ function PriceCard() {
 
       <div className="price-info">
         <div className="section">
-          <label htmlFor="passenger-number">Yolcu Tipi</label>
+          <label htmlFor="passenger-number" className="medium-heading">Yolcu Tipi</label>
           <p className="passenger-number">
             {reduxSearchState.numberOfPassengers} Yetişkin
           </p>

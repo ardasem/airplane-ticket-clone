@@ -15,47 +15,6 @@
   background: $defaultBgGradient;
   align-items: flex-start;
 
-  .airline-stats{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    img {
-      width: 250px;
-      height: 250px;
-      border-radius: 6px;
-    }
-  
-
-  }  
-
-  .flight-stats {
-    display: flex;
-    flex-direction: row;
-    gap: 230px;
-    justify-content: center;
-    
-  }
-
-  .stats-container {
-    display: flex;
-    flex-direction: column;
-    gap : 40px;
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  .stat-card{
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    border-radius: 16px;
-    background-color: rgb(165, 159, 159);
-    align-items: center;
-    justify-content: center;
-  }
-
   .big-heading {
     font-size: 48px;
     font-weight: 700;
@@ -72,4 +31,44 @@
     font-size: $headingThreeSize;
     margin-bottom: 10px;
   }
+
+  .airline-stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 6px;
+    }
+  }
+
+  .flight-stats {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    justify-content: center;
+  }
+
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 16px;
+    background-color: rgb(165, 159, 159);
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+
+ 
 }

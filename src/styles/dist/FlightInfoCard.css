@@ -13,38 +13,6 @@
   background: linear-gradient(90deg, rgb(169, 252, 231) 0%, rgb(4, 167, 217) 97%);
   align-items: flex-start;
 }
-.flight-info-container .airline-stats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.flight-info-container .airline-stats img {
-  width: 250px;
-  height: 250px;
-  border-radius: 6px;
-}
-.flight-info-container .flight-stats {
-  display: flex;
-  flex-direction: row;
-  gap: 230px;
-  justify-content: center;
-}
-.flight-info-container .stats-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-}
-.flight-info-container .stat-card {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  border-radius: 16px;
-  background-color: rgb(165, 159, 159);
-  align-items: center;
-  justify-content: center;
-}
 .flight-info-container .big-heading {
   font-size: 48px;
   font-weight: 700;
@@ -58,4 +26,38 @@
 .flight-info-container .small-heading {
   font-size: 24px;
   margin-bottom: 10px;
+}
+.flight-info-container .airline-stats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.flight-info-container .airline-stats img {
+  width: 200px;
+  height: 200px;
+  border-radius: 6px;
+}
+.flight-info-container .flight-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 120px;
+  justify-content: center;
+}
+.flight-info-container .stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 16px;
+  background-color: rgb(165, 159, 159);
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=FlightInfoCard.css.map */

@@ -6,8 +6,8 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  margin: 45px;
-  padding: 30px;
+  padding: 35px;
+  margin: 25px 50px 0 50px;
   border: none;
   border-radius: 6px;
   background: $defaultBg;
@@ -15,6 +15,7 @@
   font-family: $fontFamily;
   color: $fontColor;
   font-size: $headingTwoSize;
+  
 
   .airline-data {
     width: 30%;
@@ -29,8 +30,9 @@
   .flight-data {
     display: flex;
     flex-direction: row;
-    gap: 250px;
+    gap: 180px;
     width: 70%;
+    padding:0 80px 0 80px;
   }
 
   .heading {

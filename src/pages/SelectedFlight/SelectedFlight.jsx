@@ -17,12 +17,19 @@ import {
   addBillingInfo,
   addInsuranceInfo,
 } from "../../redux/user/userActions";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 
 function SelectedFlight() {
   const [passengerState, setPassengerState] = useState("");
   const [billingState, setBillingState] = useState("");
   const [contactState, setContactState] = useState("");
   const [insuranceState, setInsuranceState] = useState("");
+  const breadcrumbPath = [
+    { label: 'Ana Sayfa', url: '/' },
+    { label: 'Uçuşlar', url: '/available-flights' },
+    { label: 'Seçilen Uçuş', url: '/category/selected-flight' },
+    
+  ];
 
   const dispatch = useDispatch();
 
@@ -53,6 +60,7 @@ function SelectedFlight() {
   return (
     <div className="selected-flight-page">
       <Header />
+      <Breadcrumb path={breadcrumbPath}/>
       <FlightInfoCard />
       <PriceCard />
       <PassengerInfoContainer

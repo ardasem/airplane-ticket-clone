@@ -29,6 +29,7 @@ const flightReducer = (state = initialState, action) => {
         cut: action.payload.cut,
         flightNo: action.payload.flightNo,
         flightDate: action.payload.flightDate,
+        airlineCode: action.payload.airlineCode,
         totalPrice: action.payload.totalPrice,
       };
     }

@@ -1,0 +1,28 @@
+@import '../../styles/globalstyles/Variables.scss';
+
+nav{
+    font-family: $fontFamily;
+    align-items: center;
+    margin-right: 1300px;
+    
+  
+    
+    .list{
+        list-style-type: none;
+        display: flex;
+        gap: 40px;
+        flex-direction: row;
+        
+        .linknav{
+            text-decoration: none;
+            color: white;
+        }
+       
+        .linknav:hover{
+            text-decoration: none;
+            color: black;
+        }
+
+    }
+   
+}

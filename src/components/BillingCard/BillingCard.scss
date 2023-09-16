@@ -33,12 +33,18 @@
     margin-bottom: 10px;
   }
 
-  .billing-form {
+  .radio-buttons{
     display: flex;
     flex-direction: row;
+    gap: 20px;
+  }
+
+  .billing-form {
+    display: flex;
+    flex-direction: column;
     gap: 35px;
     margin-top: 20px;
-    align-items: center;
+  
   }
 
   .checkbox {

@@ -10,12 +10,33 @@ function SearchBar({ data }) {
   const dispatch = useDispatch();
   const [routeState, setRouteState] = useState("one-way");
   const [errorMessage, setErrorMessage] = useState("");
+  const reduxState = useSelector((state) => state.searchState);
+  const [formData, setFormData] = useState({
+    departurePort: reduxState.travelFrom,
+    arrivalPort: reduxState.travelTo,
+    departureDate: reduxState.departureDate,
+    arrivalDate: reduxState.arrivalDate,
+    numberOfPassengers: reduxState.numberOfPassengers,
+    dataPassed: false,
+  });
+
+  useEffect(() => {
+    
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      departurePort: reduxState.travelFrom,
+      arrivalPort: reduxState.travelTo,
+      departureDate: reduxState.departureDate,
+      arrivalDate: reduxState.arrivalDate,
+      numberOfPassengers: reduxState.numberOfPassengers,
+      dataPassed: false,
+    }));
+   
+  }, []);
 
   const handleRouteChange = (e) => {
     setRouteState(e.target.value);
   };
-
-  const reduxState = useSelector((state) => state.searchState);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,27 +47,19 @@ function SearchBar({ data }) {
       setErrorMessage("Uçuş Bulunamadı.");
       return;
     } else {
-      console.log("Form Data:", formData);
       dispatch(setFlightSearch(formData));
     }
   };
 
   const handleLinkClick = (e) => {
-    if ( formData.departurePort !== "Düsseldorf" ||
-    formData.arrivalPort !== "Antalya") {
-      e.preventDefault(); 
+    if (
+      formData.departurePort !== "Düsseldorf" ||
+      formData.arrivalPort !== "Antalya"
+    ) {
+      e.preventDefault();
       setErrorMessage("Please select a route.");
     }
   };
-
-  const [formData, setFormData] = useState({
-    departurePort: "",
-    arrivalPort: "",
-    departureDate: "",
-    arrivalDate: "",
-    numberOfPassengers: 1,
-    dataPassed: false,
-  });
 
   return (
     <div className="search-form">
@@ -93,13 +106,15 @@ function SearchBar({ data }) {
             onChange={(e) =>
               setFormData({ ...formData, departurePort: e.target.value })
             }
+            value={formData.travelFrom}
           >
-            {!reduxState.travelTo && <option value="">Seçiniz</option>}
-            {reduxState.travelTo && (
+            {!reduxState.travelFrom && <option value="">Seçiniz</option>}
+            {reduxState.travelFrom && (
               <option value={reduxState.travelFrom}>
                 {reduxState.travelFrom}
               </option>
             )}
+
             {destinationData.ports.map((port) => (
               <option key={port.code} value={port.explanation}>
                 {port.explanation}
@@ -118,11 +133,15 @@ function SearchBar({ data }) {
             onChange={(e) =>
               setFormData({ ...formData, arrivalPort: e.target.value })
             }
+            value={formData.travelTo}
           >
-            {!reduxState.travelTo && <option value="">Seçiniz</option>}
+             {!reduxState.travelTo && <option value="">Seçiniz</option>}
             {reduxState.travelTo && (
-              <option value={reduxState.travelTo}>{reduxState.travelTo}</option>
-            )}{" "}
+              <option value={reduxState.travelTo}>
+                {reduxState.travelTo}
+              </option>
+            )}
+
             {destinationData.ports.map((port) => (
               <option key={port.code} value={port.explanation}>
                 {port.explanation}
@@ -154,7 +173,6 @@ function SearchBar({ data }) {
             className="data-input"
             name="departure-date"
             type="date"
-            value={reduxState.arrivalDate}
             onChange={(e) =>
               setFormData({ ...formData, arrivalDate: e.target.value })
             }
@@ -169,7 +187,7 @@ function SearchBar({ data }) {
           <select
             className="dropdown-input"
             name="number-of-passengers"
-            value={reduxState.numberOfPassengers}
+            value={formData.numberOfPassengers}
             onChange={(e) =>
               setFormData({ ...formData, numberOfPassengers: e.target.value })
             }
@@ -185,7 +203,11 @@ function SearchBar({ data }) {
         </div>
 
         <div className="search-button" onClick={handleSubmit}>
-          <Link className="link" to="/available-flights" onClick={handleLinkClick}>
+          <Link
+            className="link"
+            to="/available-flights"
+            onClick={handleLinkClick}
+          >
             Ara
           </Link>
         </div>

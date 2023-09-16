@@ -28,12 +28,16 @@
   font-size: 24px;
   margin-bottom: 10px;
 }
-.billing-card-container .billing-form {
+.billing-card-container .radio-buttons {
   display: flex;
   flex-direction: row;
+  gap: 20px;
+}
+.billing-card-container .billing-form {
+  display: flex;
+  flex-direction: column;
   gap: 35px;
   margin-top: 20px;
-  align-items: center;
 }
 .billing-card-container .checkbox {
   display: flex;
