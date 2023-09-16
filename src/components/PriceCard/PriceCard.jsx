@@ -28,17 +28,17 @@ function PriceCard() {
 
         <div className="section">
           <label htmlFor="price">Fiyat</label>
-          <p className="price">{totalPrice} {reduxFlightState.currency}</p>
+          <p className="price">{reduxFlightState.totalPrice} {reduxFlightState.currency}</p>
         </div>
 
         <div className="section">
           <label htmlFor="tax">Vergi/Harç (%18)</label>
-          <p className="tax">{tax} {reduxFlightState.currency}</p>
+          <p className="tax">{reduxFlightState.tax} {reduxFlightState.currency}</p>
         </div>
 
         <div className="section">
           <label htmlFor="cut">Hizmet Bedeli (%8)</label>
-          <p className="cut">{cut} {reduxFlightState.currency}</p>
+          <p className="cut">{reduxFlightState.cut} {reduxFlightState.currency}</p>
         </div>
 
       </div>

@@ -1,7 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./PaymentCard.scss";
 
 function PaymentCard() {
+  const reduxFlightState = useSelector(state=> state.flightState)
+
   const handlePayment = () => {
     return 1;
   };
@@ -77,7 +80,7 @@ function PaymentCard() {
       </form>
 
       <div className="final-price">
-        <p className="label">Toplam ödenecek tutar: </p>
+        <p className="label">Toplam ödenecek tutar: {reduxFlightState.totalPrice}</p>
         <button>Ödemeyi Tamamla</button>
       </div>
 

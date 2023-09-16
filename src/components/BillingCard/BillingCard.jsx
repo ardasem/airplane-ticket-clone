@@ -18,11 +18,9 @@ function BillingCard({onBillingDataChange}) {
      ...billingState,
      [name]: name === 'notCitizen' ? checked : value,
     });
-    console.log(billingState)
   };
 
   useEffect(() => {
-    console.log(billingState); // Log the updated state
     onBillingDataChange(billingState);
   }, [billingState, onBillingDataChange]);
 

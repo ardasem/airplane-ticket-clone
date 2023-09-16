@@ -1,4 +1,4 @@
-import { BUY_FLIGHT, SET_USER_DATA, ADD_PASSENGERS, ADD_CONTACT_INFO ,ADD_BILLING_INFO,ADD_INSURANCE_INFO} from "./userTypes";
+import { BUY_FLIGHT, ADD_PASSENGERS, ADD_CONTACT_INFO ,ADD_BILLING_INFO,ADD_INSURANCE_INFO} from "./userTypes";
 
 
 export const addPassengers = (newPassengers) => ({
@@ -25,13 +25,6 @@ export const addInsuranceInfo = (insuranceData) => ({
   payload: insuranceData,
 });
 
-export const setUserData = (userData) => {
-    return {
-      type: SET_USER_DATA,
-      info: "User data is set.",
-      payload: userData,
-    };
-  };
 
   export const buyFlight = (number = 1) => {
     return {

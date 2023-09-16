@@ -1,15 +1,17 @@
 import React from "react";
 import { useState,useEffect } from 'react';
+import { useSelector } from "react-redux/";
 import "./InsuranceCard.scss";
 
 
 function InsuranceCard({onInsuranceDataChange}) {
 
+  const reduxFlightState = useSelector(state=> state.flightState)
+
   
   const [insuranceState,setInsuranceState] = useState({
     insurance:false,
   });
-
 
 
   const handleCheckboxChange = (event) => {
@@ -19,14 +21,11 @@ function InsuranceCard({onInsuranceDataChange}) {
       ...insuranceState,
        [name]: checked,
      });
-
-     console.log(insuranceState)
     
   };
 
 
   useEffect(() => {
-    console.log(insuranceState); // Log the updated state
     onInsuranceDataChange(insuranceState);
   }, [insuranceState, onInsuranceDataChange]);
 
@@ -43,7 +42,7 @@ function InsuranceCard({onInsuranceDataChange}) {
         </div>
        
 
-        <div>totalPrice</div>
+        <div>totalPrice : {reduxFlightState.totalPrice}</div>
       </div>
     </div>
   );

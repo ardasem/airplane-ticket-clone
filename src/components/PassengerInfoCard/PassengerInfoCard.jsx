@@ -18,13 +18,7 @@ function PassengerInfoCard({onPassengerStateChange,numberOfPassengers}) {
    
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
-
-    
-  console.log("Name:", name);
-  console.log("Value:", value);
-  console.log("Type:", type);
-  console.log("Checked:", checked);
-  
+ 
     setPassengerState((prevPassengerState) => {
       let updatedPassengerState = {
         ...prevPassengerState,

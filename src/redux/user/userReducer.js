@@ -1,4 +1,4 @@
-import { SET_USER_DATA,ADD_PASSENGERS,ADD_CONTACT_INFO,ADD_BILLING_INFO,ADD_INSURANCE_INFO } from "./userTypes";
+import {ADD_PASSENGERS,ADD_CONTACT_INFO,ADD_BILLING_INFO,ADD_INSURANCE_INFO } from "./userTypes";
 
 const initialState = {
   userState: {
@@ -41,18 +41,13 @@ const userReducer = (state = initialState, action) => {
       };
     }
 
-    case SET_USER_DATA: {
-      return {
-        ...state.userState,
-        flightInsurance: action.payload.flightInsurance,
-        contactInfo: action.payload.contactInfo,
-        billingInfo: action.payload.billingInfo,
-      };
-    }
+    
 
     default:
       return state;
   }
 };
+
+
 
 export default userReducer;

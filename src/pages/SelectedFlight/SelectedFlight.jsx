@@ -7,6 +7,7 @@ import ContactCard from '../../components/ContactCard/ContactCard'
 import BillingCard from '../../components/BillingCard/BillingCard'
 import InsuranceCard from '../../components/InsuranceCard/InsuranceCard'
 import Footer from '../../components/Footer/Footer'
+import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 import { addPassengers, addContactInfo,addBillingInfo,addInsuranceInfo } from '../../redux/user/userActions'
@@ -55,10 +56,11 @@ function SelectedFlight() {
       <ContactCard onContactDataChange={handleContactDataChange}/>
       <BillingCard onBillingDataChange={handleBillingDataChange}/>
       <InsuranceCard onInsuranceDataChange={handleInsuranceDataChange}/>
+      <Link onClick={handleReduxDispatch} to='/payment'>Click to dispatch</Link>
       <Footer />
 
-      <button onClick={handleReduxDispatch}>Click to dispatch</button>
- 
+
+     
     </div>
   )
 }

@@ -9,6 +9,7 @@ const initialState = {
     airline: "",
     price: "",
     currency: "",
+    totalPrice: "",
   },
 };
 
@@ -24,6 +25,9 @@ const flightReducer = (state = initialState, action) => {
         airline: action.payload.airline,
         price: action.payload.price,
         currency: action.payload.currency,
+        tax: action.payload.tax,
+        cut: action.payload.cut,
+        totalPrice: action.payload.totalPrice,
       };
     }
 

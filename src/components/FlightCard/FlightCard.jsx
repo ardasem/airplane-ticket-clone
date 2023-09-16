@@ -1,17 +1,21 @@
 import React from "react";
 import "./FlightCard.scss";
-import { useState,useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { setFlightData } from "../../redux/flight/flightActions";
 import { Link } from "react-router-dom";
-import condor from '../../assets/img/condor.png'
-import freebird from '../../assets/img/freebird.png'
-import pegasus from '../../assets/img/pegasus-logo.jpg'
-import sunexpress from '../../assets/img/sunexpress.png'
-
+import condor from "../../assets/img/condor.png";
+import freebird from "../../assets/img/freebird.png";
+import pegasus from "../../assets/img/pegasus-logo.jpg";
+import sunexpress from "../../assets/img/sunexpress.png";
 
 function FlightCard(props) {
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const reduxSearchState = useSelector((state) => state.searchState);
+
+  const tax = props.price * reduxSearchState.numberOfPassengers * 0.18;
+  const cut = props.price * reduxSearchState.numberOfPassengers * 0.08;
+  const totalPrice = props.price * reduxSearchState.numberOfPassengers + tax + cut;
 
   const [flightState, setFlightState] = useState({
     airline: "",
@@ -21,37 +25,41 @@ const dispatch = useDispatch();
     arrTime: "",
     price: "",
     currency: "",
+    tax: "",
+    cut: "",
+    totalPrice: "",
   });
 
-  useEffect(()=>{
-    setFlightState({ airline: props.airline,
+  useEffect(() => {
+    setFlightState({
+      airline: props.airline,
       depPort: props.depPort,
       arrPort: props.arrPort,
       depTime: props.depTime,
       arrTime: props.arrTime,
       price: props.price,
-      currency: props.currency, })
-
-  },[])
-
-  
+      currency: props.currency,
+      tax: tax,
+      cut: cut,
+      totalPrice: totalPrice,
+    });
+  }, []);
 
   const handleSelect = () => {
-    
-      dispatch(setFlightData(flightState))
+    dispatch(setFlightData(flightState));
   };
 
-  const chooseLogo = ()=>{
-    if(flightState.airline === 'SunExpress'){
+  const chooseLogo = () => {
+    if (flightState.airline === "SunExpress") {
       return sunexpress;
-    } else if (flightState.airline === 'Condor'){
+    } else if (flightState.airline === "Condor") {
       return condor;
-    } else if(flightState.airline === 'Pegasus Airlines'){
+    } else if (flightState.airline === "Pegasus Airlines") {
       return pegasus;
     } else {
-      return freebird
+      return freebird;
     }
-  }
+  };
 
   return (
     <div className="flight-card-container">
@@ -87,7 +95,11 @@ const dispatch = useDispatch();
         </div>
       </div>
 
-      <button onClick={handleSelect}><Link className="link" to='/selected-flight'>Seç</Link></button>
+      <button onClick={handleSelect}>
+        <Link className="link" to="/selected-flight">
+          Seç
+        </Link>
+      </button>
     </div>
   );
 }
