@@ -5,6 +5,7 @@ import FlightCard from "../../components/FlightCard/FlightCard";
 import Footer from "../../components/Footer/Footer";
 import flightData from "../../assets/data/search.json";
 
+
 function AvailableFlights() {
   const flightCards = flightData.departureLegs.map((flight) => {
     return (
@@ -17,6 +18,8 @@ function AvailableFlights() {
         arrPort={flight.arrPort}
         price={flight.priceDetail.basePrice.amount}
         currency={flight.priceDetail.basePrice.currency}
+        flightNo = {flight.flightNo}
+        flightDate = {flight.flightDate}
       />
     );
   });
@@ -26,7 +29,7 @@ function AvailableFlights() {
   return (
     <div className="available-flights-container">
       <Header />
-      <SearchBar />
+      <SearchBar className='search-bar' />
       {flightCards}
       <Footer />
     </div>

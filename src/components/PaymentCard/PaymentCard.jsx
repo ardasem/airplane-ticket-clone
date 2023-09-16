@@ -1,9 +1,23 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import PaymentSuccessBox from "../PaymentSuccessBox/PaymentSuccessBox";
 import "./PaymentCard.scss";
 
 function PaymentCard() {
   const reduxFlightState = useSelector(state=> state.flightState)
+
+  const [isPaymentSuccessful, setPaymentSuccessful] = useState(false);
+
+  const handlePaymentSuccess = () => {
+    setPaymentSuccessful(true);
+
+    // Optionally, you can perform other actions here
+  };
+
+  const closePopup = () => {
+    setPaymentSuccessful(false);
+  };
 
   const handlePayment = () => {
     return 1;
@@ -81,9 +95,10 @@ function PaymentCard() {
 
       <div className="final-price">
         <p className="label">Toplam ödenecek tutar: {reduxFlightState.totalPrice}</p>
-        <button>Ödemeyi Tamamla</button>
+        <button onClick={handlePaymentSuccess}>Ödemeyi Tamamla</button>
       </div>
 
+      {isPaymentSuccessful && <PaymentSuccessBox onClose={closePopup} />}
      
     </div>
   );

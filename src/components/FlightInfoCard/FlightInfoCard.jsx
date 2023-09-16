@@ -8,8 +8,7 @@ import sunexpress from "../../assets/img/sunexpress.png";
 
 function FlightInfoCard() {
   const reduxFlightState = useSelector((state) => state.flightState);
-  const reduxSearchState = useSelector((state) => state.searchState);
-
+ 
   const chooseLogo = () => {
     if (reduxFlightState.airline === "SunExpress") {
       return sunexpress;
@@ -30,6 +29,7 @@ function FlightInfoCard() {
         <div className="airline-stats">
           <img src={chooseLogo()} alt="" />
           <p className="big-heading">{reduxFlightState.airline}</p>
+          <p className="big-heading">{reduxFlightState.flightNo}</p>
         </div>
 
         <div className="stats-container">
@@ -42,13 +42,13 @@ function FlightInfoCard() {
 
             <div className="stat-card">
               <p className="medium-heading">Kalkış Zamanı</p>
-              <p className="small-heading"> {reduxSearchState.departureDate}</p>
+              <p className="small-heading"> {reduxFlightState.flightDate}</p>
               <p className="small-heading"> {reduxFlightState.depTime}</p>
             </div>
 
             <div className="stat-card">
               <p className="medium-heading">Varış Zamanı</p>
-              <p className="small-heading"> {reduxSearchState.departureDate}</p>
+              <p className="small-heading"> {reduxFlightState.flightDate}</p>
               <p className="small-heading">{reduxFlightState.arrTime}</p>
             </div>
 

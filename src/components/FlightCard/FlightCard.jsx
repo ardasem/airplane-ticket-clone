@@ -40,6 +40,8 @@ function FlightCard(props) {
       arrTime: props.arrTime,
       price: props.price,
       currency: props.currency,
+      flightNo: props.flightNo,
+      flightDate: props.flightDate,
       tax: tax.toFixed(2),
       cut: cut.toFixed(2),
       totalPrice: totalPrice.toFixed(2),

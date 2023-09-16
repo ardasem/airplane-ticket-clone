@@ -1,1 +1,43 @@
-/*# sourceMappingURL=PaymentSuccessBox.css.map */
+.payment-success-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.payment-success-box .popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.payment-success-box .buttons-container {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+.payment-success-box .button {
+  margin: 20px;
+}
+.payment-success-box .button .link {
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 5px 32px #000000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  padding: 20px 50px 20px 50px;
+  width: 100%;
+  background-color: rgb(169, 252, 231);
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+}
+.payment-success-box .button .link:hover {
+  background-color: rgb(147, 240, 217);
+}/*# sourceMappingURL=PaymentSuccessBox.css.map */
