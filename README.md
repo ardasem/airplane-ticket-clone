@@ -41,15 +41,16 @@ Yolcu verisini farklı componentlerde toplayıp tek bir tuşla redux üzerine di
 # Redux üzerinde tutulan veriler
 
 Redux üzerinde veriyi 3 farklı bölümde topladım.
-- Arama verisi,
+
+# Arama verisi,
 SearchBar üzerinde ara tuşuna basıldığı anda dispatch ediliyor. 
-Bu veri,
+
 * Uçuşun başlayacağı şehir ve biteceği şehirler
 * Kalkış ve varış tarihleri ve yolcu sayısından oluşmakta.
 
-- Seçilen uçuş verisi,
-AvailableFlight kısmında listelenen uçuşlardan birini seçtiğiniz anda uçuş ile alakalı daha sonra gösterilmesi beklenen verileri dispatch ediyor.
-Bu veri, 
+# Seçilen uçuş verisi,
+AvailableFlight kısmında listelenen uçuşlardan birini seçtiğiniz anda uçuş ile alakalı daha sonra gösterilmesi beklenen verileri dispatch ediyor. 
+
 * Uçuşun başlangıç ve bitiş saatleri,
 * Kalkış ve varış havalimanları
 * Havayolu
@@ -64,7 +65,7 @@ Bu veri,
 
 bilgilerini içeriyor.
 
-- Kullanıcı verisi
+# Kullanıcı verisi
 
  * Yolcu künyeleri
   - Yolcu numarası
