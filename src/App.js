@@ -5,7 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import AvailableFlights from "./pages/AvailableFlights/AvailableFlights";
 import SelectedFlight from "./pages/SelectedFlight/SelectedFlight";
 import Payment from "./pages/Payment/Payment";
-import './styles/globalstyles/GlobalStyles.scss'
+
 
 
 function App() {

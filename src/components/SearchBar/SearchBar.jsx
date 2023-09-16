@@ -16,22 +16,22 @@ function SearchBar({ data }) {
     arrivalPort: reduxState.travelTo,
     departureDate: reduxState.departureDate,
     arrivalDate: reduxState.arrivalDate,
-    numberOfPassengers: reduxState.numberOfPassengers,
+    numberOfPassengers: reduxState.numberOfPassengers || '1',
     dataPassed: false,
   });
 
   useEffect(() => {
-    
     setFormData((prevFormData) => ({
       ...prevFormData,
       departurePort: reduxState.travelFrom,
       arrivalPort: reduxState.travelTo,
       departureDate: reduxState.departureDate,
       arrivalDate: reduxState.arrivalDate,
-      numberOfPassengers: reduxState.numberOfPassengers,
+      numberOfPassengers: reduxState.numberOfPassengers || '1',
       dataPassed: false,
     }));
-   
+
+    console.log(formData)
   }, []);
 
   const handleRouteChange = (e) => {
@@ -135,11 +135,9 @@ function SearchBar({ data }) {
             }
             value={formData.travelTo}
           >
-             {!reduxState.travelTo && <option value="">Seçiniz</option>}
+            {!reduxState.travelTo && <option value="">Seçiniz</option>}
             {reduxState.travelTo && (
-              <option value={reduxState.travelTo}>
-                {reduxState.travelTo}
-              </option>
+              <option value={reduxState.travelTo}>{reduxState.travelTo}</option>
             )}
 
             {destinationData.ports.map((port) => (
@@ -187,10 +185,10 @@ function SearchBar({ data }) {
           <select
             className="dropdown-input"
             name="number-of-passengers"
-            value={formData.numberOfPassengers}
-            onChange={(e) =>
-              setFormData({ ...formData, numberOfPassengers: e.target.value })
-            }
+            value={reduxState.numberOfPassengers}
+            onChange={(e) => {
+              setFormData({ ...formData, numberOfPassengers: e.target.value });
+            }}
           >
             <option value="1">1</option>
             <option value="2">2</option>
