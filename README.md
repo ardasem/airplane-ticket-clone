@@ -1,4 +1,3 @@
-# Pinsoft - Challenge
 
 Proje 16 component ve 5 sayfadan oluşmaktadır. Componentlerin çoğunda local state'lerini tutulmakta, Kullanıcı verisi, Arama verisi ve seçilen uçuş verisini ise redux üzerinde üç ayrı slice içinde tutulmaktadır. 
 
